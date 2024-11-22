@@ -79,7 +79,7 @@
             <Image url="@Imagenes/FooterMejorado.fw.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn_registrarse" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="138.0" layoutY="433.0" mnemonicParsing="false" onAction="#Open_Login2" prefHeight="33.0" prefWidth="154.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Completar registro" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <Button fx:id="btn_registrarse" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="433.0" mnemonicParsing="false" onAction="#Open_Login2" prefHeight="33.0" prefWidth="154.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Completar registro" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
