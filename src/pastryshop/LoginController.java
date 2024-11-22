@@ -4,11 +4,15 @@
  */
 package pastryshop;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -53,6 +57,23 @@ public class LoginController implements Initializable {
        @FXML
     private void Salir(ActionEvent event) {
         System.exit(0);
+    }
+    
+       @FXML
+    private void Open_Regis(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/
+        Stage stage2 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Regis.fxml"));
+        Scene scene1 = new Scene(fxmlLoader.load());
+        stage2.setScene(scene1);
+        stage2.setTitle("Regis");
+        stage2.show();
+
+        /*Cerrar la ventana*/
+      Node source2 = (Node) event.getSource();
+      Stage stage = (Stage) source2.getScene().getWindow();
+      stage.close();
+
     }
 
 }

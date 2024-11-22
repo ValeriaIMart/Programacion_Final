@@ -4,29 +4,38 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="377.0" style="-fx-background-color: #BBB3CC;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="617.0" prefWidth="437.0" style="-fx-background-color: #BBB3CC;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.LoginController">
    <children>
-      <ImageView fitHeight="596.0" fitWidth="411.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="657.0" fitWidth="494.0" layoutY="-40.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/BackGround.fw.png" />
          </image>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </ImageView>
-      <ImageView fitHeight="158.0" fitWidth="176.0" layoutX="126.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="158.0" fitWidth="176.0" layoutX="152.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/UserIcon.fw.png" />
          </image>
       </ImageView>
-      <Label layoutX="157.0" layoutY="169.0" text="Login" textFill="#101010">
+      <Label layoutX="179.0" layoutY="172.0" text="Login" textFill="#101010">
          <font>
             <Font size="41.0" />
          </font>
       </Label>
-      <ImageView fitHeight="136.0" fitWidth="397.0" layoutX="2.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="136.0" fitWidth="432.0" layoutX="3.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/FooterMejorado.fw.png" />
          </image>
@@ -62,7 +71,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </CheckBox>
-      <Button fx:id="btn_registrarse" layoutX="248.0" layoutY="263.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Registrarse" textFill="WHITE">
+      <Button fx:id="btn_registrarse" layoutX="248.0" layoutY="263.0" mnemonicParsing="false" onAction="#Open_Regis" prefHeight="17.0" prefWidth="118.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Registrarse" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
