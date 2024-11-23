@@ -76,21 +76,5 @@ public class LoginController implements Initializable {
 
     }
 
-    @FXML
-    private void Open_Dashboard(ActionEvent event) throws IOException {
-        /*Abrir una ventana*/
-        Stage stage3 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load());
-        stage3.setScene(scene2);
-        stage3.setTitle("Dashboard");
-        stage3.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-
-    }
 }
     

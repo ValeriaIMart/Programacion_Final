@@ -4,20 +4,9 @@
  */
 package pastryshop;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -29,73 +18,9 @@ public class DashboardController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
-    @FXML
-    private Button btn_listad;
-     
-    @FXML
-    private Button btn_lHistorial;
-    
-     @FXML
-     private Button btn_carrito;
-    
-    @FXML
-     private MenuItem MenuItemtemporada;
-    
-    @FXML
-     private MenuItem MenuItemChocolate;
-
-     @FXML
-     private MenuItem MenuItemFrutas;
-      
-     @FXML
-     private MenuItem MenuItemCumple;
-     
-     @FXML
-     private MenuItem MenuItemInfantiles;
-     
-      @FXML
-     private MenuItem MenuItemBoda;
-      
-     @FXML
-     private MenuItem MenuItemDeseos;
-     
-      @FXML
-     private MenuItem MenuItemCarrito;
-      
-     @FXML
-     private MenuItem MenuItemHistorial;
-     
-     @FXML
-     private MenuItem MenuItemSalir;
-     
-          
-                        
-     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    
     }    
-    @FXML
-    private void close(ActionEvent event) {
-        System.exit(0);
-    }
-    
-    private void Open_Pasteltemporada(ActionEvent event) throws IOException {
-        /*Abrir una ventana*/    
-        Stage stage=new Stage();
-        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.setTitle("Login");
-        stage.show();
-        
-        /*Cerrar la centana*/
-        Node source2 = (Node) event.getSource();
-        Stage stage2 = (Stage) source2.getScene().getWindow();
-        stage2.close();        
-        
-    }
     
 }

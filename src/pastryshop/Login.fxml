@@ -45,7 +45,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btn_aceptar" layoutX="177.0" layoutY="432.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Entrar" textFill="WHITE">
+      <Button fx:id="btn_aceptar" layoutX="177.0" layoutY="432.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Entrar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
