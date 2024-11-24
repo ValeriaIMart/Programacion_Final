@@ -65,18 +65,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <ImageView fitHeight="239.0" fitWidth="203.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/pastelTemporada3.fw.jpeg" />
                </image>
             </ImageView>
             <Label layoutX="13.0" layoutY="220.0" text="\$60,000" />
-            <ImageView fitHeight="25.0" fitWidth="19.0" layoutX="179.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Imagenes/Deseos.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="220.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" />
          </children>
       </Pane>
       <Pane layoutX="363.0" layoutY="635.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
