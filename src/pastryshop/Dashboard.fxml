@@ -65,46 +65,86 @@
                </image>
             </ImageView>
             <Pane layoutX="5.0" layoutY="-18.0" prefHeight="36.0" prefWidth="449.0" style="-fx-background-color: #FFFFFF;" />
-            <MenuBar layoutX="-1.0" layoutY="6.0" prefHeight="22.0" prefWidth="453.0">
+            <MenuBar layoutX="5.0" layoutY="6.0" prefHeight="22.0" prefWidth="447.0">
               <menus>
                 <Menu mnemonicParsing="false" text="Opciones">
                   <items>
-                      <MenuItem fx:id="MenuItemtemporada" mnemonicParsing="false" text="Pasteles de temporada" />
-                
-                      <MenuItem fx:id="MenuItemChocolate" mnemonicParsing="false" text="Pasteles de chocolate" />
-                      
-                       <MenuItem fx:id="MenuItemFrutas" mnemonicParsing="false" text="Pasteles de frutas" />
-                
-                      <MenuItem fx:id="MenuItemCumple" mnemonicParsing="false" text="Pasteles de cumpleaños" />
-                      
-                       <MenuItem fx:id="MenuItemInfantiles" mnemonicParsing="false" text="Pasteles infantiles" />
-                
-                      <MenuItem fx:id="MenuItemBoda" mnemonicParsing="false" text="Pasteles de boda" />
-                      
-                      <MenuItem fx:id="MenuItemDeseos" mnemonicParsing="false" text="Lista de deseos" />
-                
-                      <MenuItem fx:id="MenuItemCarrito" mnemonicParsing="false" text="Carrito" />
-                      
-                       <MenuItem fx:id="MenuItemHistorial" mnemonicParsing="false" text="Historial de compras" />
                 
                       <MenuItem fx:id="MenuItemSalir" mnemonicParsing="false" onAction="#close" text="Salir" />
                       
                       
                   </items>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Imagenes/BurgerMenu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                 </Menu>
               </menus>
             </MenuBar>
-            <Button layoutX="34.0" layoutY="280.0" mnemonicParsing="false" onAction="#Open_Pasteltemporada" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #85798C;" text="Ver mas..." />
-            <Label layoutX="34.0" layoutY="257.0" text="Pasteles de temporada">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="193.0" fitWidth="162.0" layoutX="34.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Imagenes/Pastelestemporada.fw.jpeg" />
-               </image>
-            </ImageView>
+            <Pane layoutX="22.0" layoutY="61.0" prefHeight="200.0" prefWidth="162.0" style="-fx-background-color: c8c0d3;">
+               <children>
+                  <ImageView fitHeight="135.0" fitWidth="100.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/Pastelestemporada.fw.jpeg" />
+                     </image>
+                  </ImageView>
+        
+                  <Label layoutX="17.0" layoutY="135.0" text="Pasteles de temporada">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="156.0" mnemonicParsing="false" onAction="#Open_Pasteltemporada" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #85798C;" text="Ver mas..." />
+               </children>
+            </Pane>
+            <Pane layoutX="244.0" layoutY="61.0" prefHeight="200.0" prefWidth="181.0" style="-fx-background-color: c8c0d3;">
+               <children>
+                  <ImageView fitHeight="135.0" fitWidth="128.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/boda%20corazon.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="38.0" layoutY="135.0" text="Pasteles de boda">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="159.0" mnemonicParsing="false" onAction="#Open_PastelBoda" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #85798C;" text="Ver mas..." />
+               </children>
+            </Pane>
+            <Pane layoutX="22.0" layoutY="288.0" prefHeight="200.0" prefWidth="181.0" style="-fx-background-color: c8c0d3;">
+               <children>
+                  <ImageView fitHeight="135.0" fitWidth="128.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/cumpleaños%20morado.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="20.0" layoutY="135.0" text="Pasteles de cumpleaños">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="159.0" mnemonicParsing="false" onAction="#Open_PastelCumple" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #85798C;" text="Ver mas..." />
+               </children>
+            </Pane>
+            <Pane layoutX="241.0" layoutY="288.0" prefHeight="200.0" prefWidth="181.0" style="-fx-background-color: c8c0d3;">
+               <children>
+                  <ImageView fitHeight="135.0" fitWidth="128.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/helo%20kitty.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="38.0" layoutY="135.0" text="Pasteles infantiles">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="159.0" mnemonicParsing="false" onAction="#Open_PastelInfantil" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #85798C;" text="Ver mas..." />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>

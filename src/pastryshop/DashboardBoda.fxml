@@ -9,15 +9,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="947.0" prefWidth="606.0" style="-fx-background-color: dcd6e5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.DashboardBodaController">
+<AnchorPane id="AnchorPane" prefHeight="947.0" prefWidth="606.0" style="-fx-background-color: dcd6e5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.DashboardBodaController">
    <children>
       <ImageView fitHeight="166.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/menu.fw.jpeg" />
          </image>
       </ImageView>
-      <Pane layoutX="15.0" layoutY="177.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="15.0" layoutY="177.0" prefHeight="348.0" prefWidth="269.0" style="-fx-background-color: c8c0d3;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="59.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -26,14 +25,23 @@
             </ImageView>
             <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta  redonda para bodas con fondant&#10; blanco y diseño de corazones y anillos. &#10;Con bizcocho sabor a tres leches.&#10;Ideal para bodas sencillas.&#10; Medidas 20x20." />
             <Label layoutX="10.0" layoutY="172.0" text="70,000" />
-            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
+            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" onAction="#Open_Dashboard" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Button layoutX="222.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/Deseos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
-      <Pane layoutX="311.0" layoutY="177.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="311.0" layoutY="177.0" prefHeight="348.0" prefWidth="277.0" style="-fx-background-color: c8c0d3;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="59.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -46,6 +54,15 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+            </Button>
+            <Button layoutX="216.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/Deseos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </Pane>
@@ -63,6 +80,15 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Button layoutX="200.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/Deseos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
       <Pane layoutX="311.0" layoutY="542.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
@@ -79,7 +105,28 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Button layoutX="202.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/Deseos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
+      <Button fx:id="btn_aceptar2" layoutY="127.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: ffffff;" text="Atras">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Atras.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
