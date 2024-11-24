@@ -96,4 +96,52 @@ public class DashboardController implements Initializable {
         stage2.close();        
         
     }
+    @FXML
+    private void Open_PastelBoda(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardBoda.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("DashboardBoda");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
+    @FXML
+    private void Open_PastelInfantil(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardInfantil.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("DashboardInfantil");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
+      @FXML
+    private void Open_PastelCumple(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardCumple.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("DashboardCumple");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
 }

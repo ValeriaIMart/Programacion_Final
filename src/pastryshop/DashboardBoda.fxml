@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="947.0" prefWidth="606.0" style="-fx-background-color: dcd6e5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.DashboardBodaController">
+   <children>
+      <ImageView fitHeight="166.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/menu.fw.jpeg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="15.0" layoutY="177.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="59.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/boda%20anillos.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta  redonda para bodas con fondant&#10; blanco y diseño de corazones y anillos. &#10;Con bizcocho sabor a tres leches.&#10;Ideal para bodas sencillas.&#10; Medidas 20x20." />
+            <Label layoutX="10.0" layoutY="172.0" text="70,000" />
+            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="311.0" layoutY="177.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="59.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/boda%20flores.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta de dos pisos con fondant blanco&#10; y flores comestibles de colores rosas&#10; y blancos con detalles de perlas, con &#10;un sabor de vainilla, perfecto para bodas &#10;sencillas, medidas  40x40cm" />
+            <Label layoutX="10.0" layoutY="172.0" text="50,000" />
+            <Button layoutX="134.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="542.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="91.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/boda%20luces.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta de dos pisos glam decorada con&#10; fondant y ramas de luces con flores&#10; comestibles. bizcocho con sabor a vainilla.&#10;Para una boda glamurosa y elegante.&#10;Medidas 60 x60" />
+            <Label layoutX="10.0" layoutY="172.0" text="120,000" />
+            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="311.0" layoutY="542.0" prefHeight="348.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="62.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/boda%20corazon.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta con forma de corazon con &#10;tonalidades blancas y diseño de flores&#10; (no comestibles) con escrito “married”&#10; en color oscuro. Con bizcocho de sabor &#10;a vainilla, medidas 40x40cm." />
+            <Label layoutX="10.0" layoutY="172.0" text="50,000" />
+            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
