@@ -11,10 +11,10 @@ import java.util.Date;
  * @author pccas
  */
 public class Pedido {
-    private int id;
-    private Date fecha;
-    private int idpersona;
-    private double subtotal;
+     int id;
+     Date fecha;
+     int idpersona;
+     double subtotal;
 
     public Pedido(int id, Date fecha, int idpersona, double subtotal) {
         this.id = id;
@@ -22,38 +22,5 @@ public class Pedido {
         this.idpersona = idpersona;
         this.subtotal = subtotal;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
-    public int getIdpersona() {
-        return idpersona;
-    }
-
-    public void setIdpersona(int idpersona) {
-        this.idpersona = idpersona;
-    }
-
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
-    }
-    
     
 }

@@ -9,7 +9,7 @@ package pastryshop;
  * @author pccas
  */
 public class Productos {
-   int id;
+ int id;
  String nombre;
  int cantidad;
  String descripcion;
