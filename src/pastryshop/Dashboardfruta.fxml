@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="1058.0" prefWidth="668.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.DashboardfrutaController">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="663.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/menu.fw.jpeg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="36.0" layoutY="211.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <TextArea editable="false" layoutX="10.0" layoutY="237.0" prefHeight="124.0" prefWidth="248.0" text="Torta con sabor a vainilla,&#10; cubierta con crema de chantilly y decorada&#10; con fresas frescas, medidas 20x20cm&#10; ideal para celebraciones con amigos." />
+            <Button fx:id="btn_aceptar" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/tortafresa_1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="213.0" text="\$45,000" />
+         </children>
+      </Pane>
+      <Pane layoutX="327.0" layoutY="214.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <TextArea editable="false" layoutX="10.0" layoutY="237.0" prefHeight="124.0" prefWidth="248.0" text="Torta con sabor a vainilla&#10; cubierta con crema de chantilly&#10; y decorada con rodajas de durazno&#10; en almibar, medidas 40x40 cm&#10; perfecta para una tarde de cafe." />
+            <Button fx:id="btn_aceptar1" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="213.0" text="\$65,000" />
+            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/pasteldurazno_1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="628.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <TextArea editable="false" layoutX="10.0" layoutY="237.0" prefHeight="124.0" prefWidth="248.0" text="Torta con sabor a naranja,&#10; rellena de arequipe,&#10; cubierta con una fina capa de chantilly&#10; y decorada con rodajas de naranja fresca&#10; medidas 40x40 cm&#10; ideal para una tarde de picnic. " />
+            <Button fx:id="btn_aceptar11" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="213.0" text="\$80,000" />
+            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/pastelnaranja_1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="327.0" layoutY="628.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+         <children>
+            <TextArea editable="false" layoutX="10.0" layoutY="237.0" prefHeight="124.0" prefWidth="248.0" text="Torta mediana de arándano &#10;con tres tipos de sabores y arándanos&#10; de decoración, medidas 40x40 &#10;Ideal para pasar un momento agradable. " />
+            <Button fx:id="btn_aceptar111" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="213.0" text="\$70,000" />
+            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/pastelarandano.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
