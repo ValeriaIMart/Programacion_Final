@@ -12,11 +12,11 @@ import java.util.Date;
  */
 public class Pedido {
      int id;
-     Date fecha;
+     String fecha;
      int idpersona;
-     double subtotal;
+     float subtotal;
 
-    public Pedido(int id, Date fecha, int idpersona, double subtotal) {
+    public Pedido(int id, String fecha, int idpersona, float subtotal) {
         this.id = id;
         this.fecha = fecha;
         this.idpersona = idpersona;

@@ -9,9 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -19,13 +17,13 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author SARIC
+ * @author eveli
  */
-public class ListaProducto {
+public class ListaPedido {
 
-    Nodo<Productos> cab;
+    Nodo<Pedido> cab;
 
-    ListaProducto() {
+    ListaPedido() {
         cab = null;
     }
 
@@ -37,7 +35,7 @@ public class ListaProducto {
         if (getEsVacia()) {
             return 0;
         } else {
-            Nodo<Productos> p = cab;
+            Nodo<Pedido> p = cab;
             int cont = 0;
             do {
                 cont++;
@@ -47,11 +45,11 @@ public class ListaProducto {
         }
     }
 
-    public Nodo<Productos> getBuscarProductoporId(int id) {
+    public Nodo<Pedido> getBuscarPedidoporId(int id) {
         if (getEsVacia()) {
             return null;
         } else {
-            Nodo<Productos> p = cab;
+            Nodo<Pedido> p = cab;
             do {
                 if (p.dato.id == (id)) {
                     return p;
@@ -63,34 +61,30 @@ public class ListaProducto {
         }
     }
 
-    public Productos getCrearcupo(
+    public Pedido getCrearPedido(
             JTextField jtfid,
-            JTextField jtfnom,
-            JTextField jtfcant,
-            JTextField jtfdescripcion,
-            JTextField jtfcat,
-            JTextField jtfprecio
+            JTextField jtffecha,
+            JTextField jtfidpedido,
+            JTextField jtfsubtotal
     ) {
 
-        Productos pr = null;
-        Nodo<Productos> buscar = null;
+        Pedido pr = null;
+        Nodo<Pedido> buscar = null;
 
         try {
 
-            buscar = getBuscarProductoporId(Integer.parseInt(jtfid.getText()));
+            buscar = getBuscarPedidoporId(Integer.parseInt(jtfid.getText()));
             if (buscar != null) {
                 JOptionPane.showMessageDialog(null,
                         "El ID ya existe, intente nuevamente!");
                 return null;
             } else {
 
-                pr = new Productos(
+                pr = new Pedido(
                         Integer.parseInt(jtfid.getText()),
-                        jtfnom.getText(),
-                        Integer.parseInt(jtfcant.getText()),
-                        jtfdescripcion.getText(),
-                        jtfcat.getText(),
-                        Double.parseDouble(jtfprecio.getText())
+                        jtffecha.getText(),
+                        Integer.parseInt(jtfidpedido.getText()),
+                        Float.parseFloat(jtfsubtotal.getText())
                 );
 
                 return pr;
@@ -101,11 +95,11 @@ public class ListaProducto {
         }
     }
 
-    public Nodo<Productos> getUltimo() {
+    public Nodo<Pedido> getUltimo() {
         if (cab == null) {
             return null;
         } else {
-            Nodo<Productos> p = cab;
+            Nodo<Pedido> p = cab;
             while (p.sig != cab) {
                 p = p.sig;
             }
@@ -115,20 +109,18 @@ public class ListaProducto {
 
     public void setADD(
             JTextField jtfid,
-            JTextField jtfnom,
-            JTextField jtfcant,
-            JTextField jtfdescripcion,
-            JTextField jtfcat,
-            JTextField jtfprecio
+            JTextField jtffecha,
+            JTextField jtfidpedido,
+            JTextField jtfsubtotal
     ) {
-        Productos pr = getCrearcupo(jtfid, jtfnom, jtfcant, jtfdescripcion, jtfcat, jtfprecio);
+        Pedido pr = getCrearPedido(jtfid, jtffecha, jtfidpedido, jtfsubtotal);
         if (pr != null) {
-            Nodo<Productos> info = new Nodo(pr);
+            Nodo<Pedido> info = new Nodo(pr);
             if (cab == null) {
                 cab = info;
                 cab.sig = cab;
             } else {
-                Nodo<Productos> base = getUltimo();
+                Nodo<Pedido> base = getUltimo();
                 info.sig = cab;
                 cab = info;
                 base.sig = cab;
@@ -144,8 +136,8 @@ public class ListaProducto {
             if (cab.sig == cab) {
                 cab = null;
             } else {
-                Nodo<Productos> base = getUltimo();
-                Nodo<Productos> e = cab;
+                Nodo<Pedido> base = getUltimo();
+                Nodo<Pedido> e = cab;
                 cab = cab.sig;
                 base.sig = cab;
                 e.sig = null;
@@ -157,14 +149,12 @@ public class ListaProducto {
     }
 
     public void setRegistrarFilaJTable(DefaultTableModel miModelo,
-            int pFila, Nodo<Productos> p) {
+            int pFila, Nodo<Pedido> p) {
 
         miModelo.setValueAt(p.dato.id, pFila, 0);
-        miModelo.setValueAt(p.dato.nombre, pFila, 1);
-        miModelo.setValueAt(p.dato.cantidad, pFila, 2);
-        miModelo.setValueAt(p.dato.descripcion, pFila, 3);
-        miModelo.setValueAt(p.dato.categoria, pFila, 4);
-        miModelo.setValueAt(p.dato.precio, pFila, 5);
+        miModelo.setValueAt(p.dato.fecha, pFila, 1);
+        miModelo.setValueAt(p.dato.idpersona, pFila, 2);
+        miModelo.setValueAt(p.dato.subtotal, pFila, 3);
 
     }
 
@@ -173,28 +163,24 @@ public class ListaProducto {
             JOptionPane.showMessageDialog(null, "No hay productos en la lista.");
             DefaultTableModel miModelo = new DefaultTableModel();
             miModelo.addColumn("Id");
-            miModelo.addColumn("Nombre");
-            miModelo.addColumn("Cantidad");
-            miModelo.addColumn("Descripcion");
-            miModelo.addColumn("Categoria");
-            miModelo.addColumn("Precio");
+            miModelo.addColumn("Fecha");
+            miModelo.addColumn("Id persona");
+            miModelo.addColumn("Subtotal");
             tab.setModel(miModelo);
             return;
         }
 
         int posFilaT = 0;
-        Nodo<Productos> p = cab;
+        Nodo<Pedido> p = cab;
         DefaultTableModel miModelo = new DefaultTableModel();
 
         miModelo.addColumn("Id");
-        miModelo.addColumn("Nombre");
-        miModelo.addColumn("Cantidad");
-        miModelo.addColumn("Descripcion");
-        miModelo.addColumn("Categoria");
-        miModelo.addColumn("Precio");
+        miModelo.addColumn("Fechas");
+        miModelo.addColumn("Id persona");
+        miModelo.addColumn("Subtotal");
 
         do {
-            miModelo.addRow(new Object[]{"", "", "", "", "", ""});
+            miModelo.addRow(new Object[]{"", "", "", ""});
             setRegistrarFilaJTable(miModelo, posFilaT, p);
             p = p.sig;
             posFilaT++;
@@ -208,21 +194,19 @@ public class ListaProducto {
         PrintWriter pw = null;
 
         try {
-            fichero = new FileWriter("c:/Prueba/listaProductos.txt");
+            fichero = new FileWriter("c:/Prueba/listaPedido.txt");
             pw = new PrintWriter(fichero);
 
             if (cab == null) {
                 pw.println("Lista vacía!");
             } else {
-                Nodo<Productos> p = cab;
+                Nodo<Pedido> p = cab;
                 do {
-                    Productos pro = p.dato;
-                    pw.println("ID : " + pro.id);
-                    pw.println("Nombre Producto: " + pro.nombre);
-                    pw.println("Cantidad: " + pro.cantidad);
-                    pw.println("Descripcion: " + pro.descripcion);
-                    pw.println("Categoria: " + pro.categoria);
-                    pw.println("Precio: " + pro.precio);
+                    Pedido ped = p.dato;
+                    pw.println("ID : " + ped.id);
+                    pw.println("Fecha: " + ped.fecha);
+                    pw.println("ID persona: " + ped.idpersona);
+                    pw.println("Sub total: " + ped.subtotal);
                     pw.println("=================================");
                     p = p.sig;
                 } while (p != cab);
@@ -257,7 +241,7 @@ public class ListaProducto {
         BufferedReader bufferedReader = null;
 
         try {
-            fileReader = new FileReader("c:/Prueba/listaProducto.txt");
+            fileReader = new FileReader("c:/Prueba/listaPedido.txt");
             bufferedReader = new BufferedReader(fileReader);
             StringBuilder contenido = new StringBuilder();
             String linea;
@@ -289,17 +273,15 @@ public class ListaProducto {
             if (cab == null) {
                 JOptionPane.showMessageDialog(null, "Lista Vacía!... ", "Información", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                Nodo<Productos> p = cab;
+                Nodo<Pedido> p = cab;
                 int op = 0;
 
                 do {
                     StringBuilder aux = new StringBuilder();
                     aux.append("ID : ").append(p.dato.id).append("\n");
-                    aux.append("Nombre Producto: ").append(p.dato.nombre).append("\n");
-                    aux.append("cantidad: ").append(p.dato.cantidad).append("\n");
-                    aux.append("Descripcion: ").append(p.dato.descripcion).append("\n");
-                    aux.append("Categoria: ").append(p.dato.categoria).append("\n");
-                    aux.append("Precio: ").append(p.dato.precio).append("\n");
+                    aux.append("Fecha: ").append(p.dato.fecha).append("\n");
+                    aux.append("Id persona: ").append(p.dato.idpersona).append("\n");
+                    aux.append("Sub total: ").append(p.dato.subtotal).append("\n");
                     JOptionPane.showMessageDialog(null, aux.toString());
 
                     op = JOptionPane.showConfirmDialog(null,
@@ -319,23 +301,22 @@ public class ListaProducto {
     public void getBuscarID(JTextField idI, JTextArea textArea) {
         try {
             int id = Integer.parseInt(idI.getText());
-            Nodo<Productos> ProductoEncontrado = getBuscarProductoporId(id);
+            Nodo<Pedido> PedidoEncontrado = getBuscarPedidoporId(id);
 
-            if (ProductoEncontrado != null) {
-                Productos pro = ProductoEncontrado.dato;
+            if (PedidoEncontrado != null) {
+                Pedido pro = PedidoEncontrado.dato;
                 String mensaje = "ID: " + pro.id + "\n"
-                        + "Nombre producto: " + pro.nombre + "\n"
-                        + "Cantidad: " + pro.cantidad + " años\n"
-                        + "Descripcion: " + pro.descripcion + "\n"
-                        + "Cantegoria: " + pro.categoria + "\n"
-                        + "Precio:" + pro.precio;
+                        + "Fecha: " + pro.fecha + "\n"
+                        + "Id persona: " + pro.idpersona + "\n"
+                        + "Sub total: " + pro.subtotal + "\n";
 
                 textArea.setText(mensaje);
             } else {
-                textArea.setText("Producto no encontrado.");
+                textArea.setText("Pedido no encontrado.");
             }
         } catch (NumberFormatException e) {
             textArea.setText("ID no válido. Por favor, ingrese un número.");
         }
     }
+
 }
