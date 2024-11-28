@@ -48,7 +48,7 @@
          <children>
             <Button layoutX="7.0" layoutY="513.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="162.0" style="-fx-background-color: #EDDBDB;" text="Lista de deseos" textOverrun="WORD_ELLIPSIS" />
             <Button layoutX="163.0" layoutY="513.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="155.0" style="-fx-background-color: #EDDBDB;" text="Historial de compras" />
-            <Button layoutX="313.0" layoutY="513.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #EDDBDB;" text="Carrito de compras" />
+            <Button layoutX="313.0" layoutY="513.0" mnemonicParsing="false" onAction="#Open_Carrito" prefHeight="65.0" prefWidth="142.0" style="-fx-background-color: #EDDBDB;" text="Carrito de compras" />
             <ImageView fitHeight="23.0" fitWidth="32.0" layoutX="65.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/User.png" />

@@ -164,6 +164,24 @@ public class DashboardController implements Initializable {
         stage2.close();        
         
     }
+    
+    
+        @FXML
+        private void Open_Carrito(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Carrito.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("Carrito");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
 }
 
 

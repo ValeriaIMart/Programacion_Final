@@ -12,63 +12,33 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author PCDeveloper
+ * @author pccas
  */
-public class LandingPageController implements Initializable {
+public class LoginadmController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-    
-     @FXML
-    private Button btn_login;
-     @FXML
-    private Button btn_login_admin;
-     @FXML
-    private Button btn_exit;
-     
-    @FXML 
-    private Stage stageIni;
-     
-     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-
+    
+    
     @FXML
-    private void Open_Login(ActionEvent event) throws IOException {
+    private void Open_DashboardAdmin(ActionEvent event) throws IOException {
         /*Abrir una ventana*/    
         Stage stage=new Stage();
-        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Login.fxml"));
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardAdmin.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
-        stage.setTitle("Login");
-        stage.show();
-        
-        /*Cerrar la centana*/
-        Node source2 = (Node) event.getSource();
-        Stage stage2 = (Stage) source2.getScene().getWindow();
-        stage2.close();        
-        
-    }
-@FXML
-    private void Open_loginadm(ActionEvent event) throws IOException {
-        /*Abrir una ventana*/    
-        Stage stage=new Stage();
-        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("loginadm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.setTitle("loginadm");
+        stage.setTitle("DashboardAdmin");
         stage.show();
         
         /*Cerrar la centana*/
@@ -78,8 +48,7 @@ public class LandingPageController implements Initializable {
         
     }
     
-    
-    @FXML
+       @FXML
     private void closeAction(ActionEvent event) {
         System.exit(0);
     }

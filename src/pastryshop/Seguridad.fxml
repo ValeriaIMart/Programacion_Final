@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="683.0" prefWidth="387.0" style="-fx-background-color: dcd6e5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.SeguridadController">
+   <children>
+      <ImageView fitHeight="119.0" fitWidth="387.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/menu.fw.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

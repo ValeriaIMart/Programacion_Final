@@ -43,7 +43,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btn_login_admin" layoutX="74.0" layoutY="393.0" mnemonicParsing="false" onAction="#Open_Login" prefHeight="40.0" prefWidth="265.0" style="-fx-background-color: #6B6271; -fx-cursor: hand;" text="Ingresar como Administrador" textFill="#fffcfc">
+      <Button fx:id="btn_login_admin" layoutX="74.0" layoutY="393.0" mnemonicParsing="false" onAction="#Open_loginadm" prefHeight="40.0" prefWidth="265.0" style="-fx-background-color: #6B6271; -fx-cursor: hand;" text="Ingresar como Administrador" textFill="#fffcfc">
          <font>
             <Font size="18.0" />
          </font>

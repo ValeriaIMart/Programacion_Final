@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="406.0" style="-fx-background-color: dcd6e5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.DashboardAdminController">
+   <children>
+      <ImageView fitHeight="132.0" fitWidth="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/menu.fw.jpeg" />
+         </image>
+      </ImageView>
+      <Button layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="148.0" text="Seguridad">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/NewUser.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="148.0" layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="142.0" text=" pedidos">
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Pedidis.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="290.0" layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="132.0" text="Productos">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Pastel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
