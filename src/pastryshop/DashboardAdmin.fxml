@@ -5,15 +5,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="406.0" style="-fx-background-color: dcd6e5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.DashboardAdminController">
+<AnchorPane id="AnchorPane" prefHeight="713.0" prefWidth="406.0" style="-fx-background-color: dcd6e5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.DashboardAdminController">
    <children>
       <ImageView fitHeight="132.0" fitWidth="423.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/menu.fw.jpeg" />
          </image>
       </ImageView>
-      <Button layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="148.0" text="Seguridad">
+      <Button layoutY="626.0" mnemonicParsing="false" onAction="#Open_Seguridad" prefHeight="87.0" prefWidth="148.0" text="Seguridad">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
