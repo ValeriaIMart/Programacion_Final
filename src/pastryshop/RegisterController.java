@@ -4,54 +4,56 @@
  */
 package pastryshop;
 
+import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.PrintWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.swing.JOptionPane;
 
-/**
- * FXML Controller class
- *
- * @author eveli
- */
-public class DashBoardCumpleController implements Initializable {
-@FXML
-    private Button btn_aceptar;
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }   
-     @FXML
+
+public class RegisterController {
+    
+    
+
+    @FXML
+    private TextField txt_newUsuario;
+    @FXML
+    private PasswordField txt_newPassword;
+    
+    @FXML
+    private TextField txt_phone;
+    @FXML
+    private TextField txt_nom;
+    @FXML
+    private TextField txt_Direccion;
+   
+    
+       @FXML
     private void Open_Dashboard(ActionEvent event) throws IOException {
-                 /*Abrir una ventana*/
-        Stage stage4 = new Stage();
+        /*Abrir una ventana*/
+        Stage stage3 = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
-        stage4.setScene(scene2);
-        stage4.initStyle(StageStyle.UNDECORATED);
-        stage4.setTitle("Dashboard");
-        stage4.show();
+        stage3.setScene(scene2);
+         stage3.initStyle(StageStyle.UNDECORATED);
+        stage3.setTitle("Dashboard");
+        stage3.show();
 
         /*Cerrar la ventana*/
       Node source2 = (Node) event.getSource();
       Stage stage = (Stage) source2.getScene().getWindow();
       stage.close();
-          
+
     }
     
-        @FXML
-    private void close(ActionEvent event) {
-        System.exit(0);
-    }
 }
+            
+                

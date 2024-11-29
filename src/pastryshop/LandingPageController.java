@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -52,6 +53,7 @@ public class LandingPageController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Login");
         stage.show();
         
@@ -68,6 +70,7 @@ public class LandingPageController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("loginadm.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("loginadm");
         stage.show();
         

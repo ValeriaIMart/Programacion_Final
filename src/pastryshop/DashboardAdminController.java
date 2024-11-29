@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -37,6 +38,7 @@ public class DashboardAdminController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Seguridad.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         stage4.setScene(scene2);
+        stage4.initStyle(StageStyle.UNDECORATED);
         stage4.setTitle("Seguridad");
         stage4.show();
 

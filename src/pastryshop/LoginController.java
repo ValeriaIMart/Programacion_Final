@@ -4,6 +4,7 @@
  */
 package pastryshop;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 /**
@@ -66,6 +68,7 @@ public class LoginController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Regis.fxml"));
         Scene scene1 = new Scene(fxmlLoader.load());
         stage2.setScene(scene1);
+        stage2.initStyle(StageStyle.UNDECORATED);
         stage2.setTitle("Regis");
         stage2.show();
 
@@ -83,6 +86,7 @@ public class LoginController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         stage3.setScene(scene2);
+         stage3.initStyle(StageStyle.UNDECORATED);
         stage3.setTitle("Dashboard");
         stage3.show();
 
@@ -92,5 +96,8 @@ public class LoginController implements Initializable {
       stage.close();
 
     }
+    
+
+   
 }
    

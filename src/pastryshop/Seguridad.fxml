@@ -3,8 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -25,16 +23,19 @@
       <Label layoutX="20.0" layoutY="451.0" text="Contraseña" />
       <ComboBox editable="true" layoutX="14.0" layoutY="145.0" prefHeight="25.0" prefWidth="349.0" promptText="Administrador Cliente" />
       <TextField layoutX="19.0" layoutY="210.0" prefHeight="25.0" prefWidth="349.0" />
-      <TextField layoutX="20.0" layoutY="274.0" prefHeight="25.0" prefWidth="349.0" />
+      <TextField fx:id="txtco" layoutX="20.0" layoutY="274.0" prefHeight="25.0" prefWidth="349.0" />
       <TextField layoutX="20.0" layoutY="342.0" prefHeight="25.0" prefWidth="349.0" />
       <TextField layoutX="20.0" layoutY="409.0" prefHeight="25.0" prefWidth="349.0" />
       <TextField layoutX="20.0" layoutY="477.0" prefHeight="25.0" prefWidth="349.0" />
-      <Button layoutX="24.0" layoutY="527.0" mnemonicParsing="false" text="Agregar" />
-      <TableView layoutX="4.0" layoutY="584.0" prefHeight="181.0" prefWidth="378.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
+      <Button fx:id="btnRegistrar" layoutX="24.0" layoutY="527.0" mnemonicParsing="false" onAction="#registrar" text="Agregar" />
+      <Button layoutX="6.0" layoutY="74.0" mnemonicParsing="false" onAction="#Open_DashboardAdmin" style="-fx-background-color: ffffff;" text="Atras">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Atras.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

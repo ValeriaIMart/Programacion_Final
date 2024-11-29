@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -38,6 +39,7 @@ public class DashboardBodaController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         stage4.setScene(scene2);
+        stage4.initStyle(StageStyle.UNDECORATED);
         stage4.setTitle("Dashboard");
         stage4.show();
 

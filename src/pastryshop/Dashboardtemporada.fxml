@@ -9,28 +9,28 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="1075.0" prefWidth="660.0" style="-fx-background-color: dcd6e5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.DashboardtemporadaController">
+<AnchorPane id="AnchorPane" prefHeight="940.0" prefWidth="562.0" style="-fx-background-color: dcd6e5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.DashboardtemporadaController">
    <children>
-      <ImageView fitHeight="213.0" fitWidth="663.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="154.0" fitWidth="793.0" layoutX="-5.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/menu.fw.jpeg" />
          </image>
       </ImageView>
-      <Pane layoutX="32.0" layoutY="204.0" prefHeight="394.0" prefWidth="276.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="26.0" layoutY="159.0" prefHeight="379.0" prefWidth="248.0" style="-fx-background-color: c8c0d3;">
          <children>
-            <TextArea editable="false" layoutX="10.0" layoutY="237.0" prefHeight="124.0" prefWidth="248.0" text="Torta de vainilla esponjosa cubierta &#10;con chantilly suave y decorada con detalles &#10;temáticos de Halloween,&#10; medidas 40x40cm &#10;perfecta&#10; para una celebración espeluznante." />
-            <Button fx:id="btn_aceptar" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+            <TextArea editable="false" layoutX="2.0" layoutY="205.0" prefHeight="128.0" prefWidth="248.0" text="Torta de vainilla esponjosa cubierta &#10;con chantilly suave y decorada con detalles &#10;temáticos de Halloween,&#10; medidas 40x40cm &#10;perfecta&#10; para una celebración espeluznante." />
+            <Button fx:id="btn_aceptar" layoutX="108.0" layoutY="340.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="54.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/pastel1temporada.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="10.0" layoutY="213.0" text="\$80,000" />
-            <Button layoutX="222.0" layoutY="196.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: c8c0d3;">
+            <Label layoutX="2.0" layoutY="188.0" text="\$80,000" />
+            <Button layoutX="198.0" layoutY="155.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: c8c0d3;">
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,23 +41,23 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="56.0" layoutY="635.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="26.0" layoutY="555.0" prefHeight="361.0" prefWidth="248.0" style="-fx-background-color: c8c0d3;">
          <children>
-            <TextArea editable="false" layoutX="10.0" layoutY="243.0" prefHeight="118.0" prefWidth="248.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
-            <Button fx:id="btn_aceptar1" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+            <TextArea editable="false" layoutY="197.0" prefHeight="118.0" prefWidth="238.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
+            <Button fx:id="btn_aceptar1" layoutX="109.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <ImageView fitHeight="213.0" fitWidth="190.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="164.0" fitWidth="169.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/PastelTemporada2.fw.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="13.0" layoutY="220.0" text="\$70,000" />
-            <Button layoutX="215.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: c8c0d3;">
+            <Label layoutX="10.0" layoutY="174.0" text="\$70,000" />
+            <Button layoutX="198.0" layoutY="153.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="33.0" style="-fx-background-color: c8c0d3;">
                <graphic>
-                  <ImageView fitHeight="36.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Imagenes/Deseos.png" />
                      </image>
@@ -66,21 +66,21 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="357.0" layoutY="204.0" prefHeight="394.0" prefWidth="296.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="296.0" layoutY="159.0" prefHeight="379.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
          <children>
-            <TextArea editable="false" layoutX="10.0" layoutY="243.0" prefHeight="118.0" prefWidth="248.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
-            <Button fx:id="btn_aceptar11" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+            <TextArea editable="false" layoutY="208.0" prefHeight="118.0" prefWidth="248.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
+            <Button fx:id="btn_aceptar11" layoutX="104.0" layoutY="334.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="205.0" fitWidth="156.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/pastelTemporada3.fw.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="13.0" layoutY="220.0" text="\$60,000" />
-            <Button layoutX="241.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: c8c0d3;">
+            <Label layoutX="14.0" layoutY="161.0" text="\$60,000" />
+            <Button layoutX="188.0" layoutY="147.0" mnemonicParsing="false" style="-fx-background-color: c8c0d3;">
                <graphic>
                   <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -91,21 +91,21 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="363.0" layoutY="635.0" prefHeight="394.0" prefWidth="267.0" style="-fx-background-color: c8c0d3;">
+      <Pane layoutX="296.0" layoutY="555.0" prefHeight="361.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
          <children>
-            <TextArea editable="false" layoutX="10.0" layoutY="243.0" prefHeight="118.0" prefWidth="248.0" text="Torta con sabor a caramelo,&#10; cubierta con fondant,&#10; medidas 40x40cm &#10;perfecta para  recibir el año nuevo&#10; con dulzura." />
-            <Button fx:id="btn_aceptar12" layoutX="118.0" layoutY="368.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
+            <TextArea editable="false" layoutX="9.0" layoutY="197.0" prefHeight="118.0" prefWidth="248.0" text="Torta con sabor a caramelo,&#10; cubierta con fondant,&#10; medidas 40x40cm &#10;perfecta para  recibir el año nuevo&#10; con dulzura." />
+            <Button fx:id="btn_aceptar12" layoutX="128.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <ImageView fitHeight="213.0" fitWidth="303.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/PastelTemporada4.fw.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="13.0" layoutY="220.0" text="\$90,000" />
-            <Button layoutX="211.0" layoutY="192.0" mnemonicParsing="false" style="-fx-background-color: c8c0d3;">
+            <Label layoutX="14.0" layoutY="175.0" text="\$90,000" />
+            <Button layoutX="201.0" layoutY="154.0" mnemonicParsing="false" style="-fx-background-color: c8c0d3;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -116,7 +116,7 @@
             </Button>
          </children>
       </Pane>
-      <Button fx:id="btn_aceptar2" layoutX="3.0" layoutY="134.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: ffffff;" text="Atras">
+      <Button fx:id="btn_aceptar2" layoutY="98.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: ffffff;" text="Atras">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

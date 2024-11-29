@@ -8,17 +8,27 @@ package pastryshop;
  *
  * @author pccas
  */
-import java.util.Vector;
-
-
 public class Usuario {
-    private static Vector <Registro> datos = new Vector <Registro>();
+    public String nombre;
+    public int numero;
+    public String direccion;
+    public String correo;
+    public String contraseña;
+    public String tipo;
 
-    public static void agrgar (Registro obj) {
-    datos.addElement(obj);
+    public Usuario(String nombre, int numero, String direccion, String correo, String contraseña, String tipo) {
+        this.nombre = nombre;
+        this.numero = numero;
+        this.direccion = direccion;
+        this.correo = correo;
+        this.contraseña = contraseña;
+        this.tipo = tipo;
     }
-    public static Vector mostrar(){
-    return datos;
-    }
-  
+
+   
+
+    
+    
+    
+    
 }

@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -87,6 +88,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Dashboardtemporada.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Dashboardtemporada");
         stage.show();
         
@@ -104,6 +106,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Dashboardtemporada.fxml"));
         Scene scene1 = new Scene(fxmlLoader.load());
         stage.setScene(scene1);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Dashboardtemporada");
         stage.show();
         
@@ -123,6 +126,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardBoda.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("DashboardBoda");
         stage.show();
         
@@ -139,6 +143,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardInfantil.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("DashboardInfantil");
         stage.show();
         
@@ -155,6 +160,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DashboardCumple.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("DashboardCumple");
         stage.show();
         
@@ -173,6 +179,7 @@ public class DashboardController implements Initializable {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Carrito.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Carrito");
         stage.show();
         
