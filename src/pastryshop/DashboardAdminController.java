@@ -51,6 +51,7 @@ public class DashboardAdminController implements Initializable {
       stage.close();
           
     } 
+     @FXML
     private void Open_AgregarEliProducto(ActionEvent event) throws IOException {
                  /*Abrir una ventana*/
         Stage stage4 = new Stage();
@@ -66,7 +67,8 @@ public class DashboardAdminController implements Initializable {
       Stage stage = (Stage) source2.getScene().getWindow();
       stage.close();
           
-    } 
+    }
+     @FXML
     private void Open_PedidoAdministrativo(ActionEvent event) throws IOException {
                  /*Abrir una ventana*/
         Stage stage4 = new Stage();

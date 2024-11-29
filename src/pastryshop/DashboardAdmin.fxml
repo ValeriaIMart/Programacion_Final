@@ -21,7 +21,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="148.0" layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="142.0" text=" pedidos">
+      <Button layoutX="148.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_PedidoAdministrativo" prefHeight="87.0" prefWidth="142.0" text=" pedidos">
          <graphic>
             <ImageView fitHeight="54.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,7 +30,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="290.0" layoutY="626.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="132.0" text="Productos">
+      <Button layoutX="290.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_AgregarEliProducto" prefHeight="87.0" prefWidth="132.0" text="Productos">
          <graphic>
             <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                <image>
