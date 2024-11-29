@@ -23,18 +23,21 @@ import javafx.stage.StageStyle;
  * @author eveli
  */
 public class DashboardBodaController implements Initializable {
-@FXML
+
+    @FXML
     private Button btn_aceptar;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    } 
+    }
+
     @FXML
     private void Open_Dashboard(ActionEvent event) throws IOException {
-                 /*Abrir una ventana*/
+        /*Abrir una ventana*/
         Stage stage4 = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
@@ -44,14 +47,13 @@ public class DashboardBodaController implements Initializable {
         stage4.show();
 
         /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-          
+        Node source2 = (Node) event.getSource();
+        Stage stage = (Stage) source2.getScene().getWindow();
+        stage.close();
+
     }
-    
-    
-        @FXML
+
+    @FXML
     private void close(ActionEvent event) {
         System.exit(0);
     }

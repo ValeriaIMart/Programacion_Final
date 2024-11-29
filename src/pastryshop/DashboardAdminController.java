@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -26,12 +27,14 @@ public class DashboardAdminController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
-           @FXML
+     @FXML
     private void Open_Seguridad(ActionEvent event) throws IOException {
                  /*Abrir una ventana*/
         Stage stage4 = new Stage();
@@ -40,6 +43,38 @@ public class DashboardAdminController implements Initializable {
         stage4.setScene(scene2);
         stage4.initStyle(StageStyle.UNDECORATED);
         stage4.setTitle("Seguridad");
+        stage4.show();
+
+        /*Cerrar la ventana*/
+      Node source2 = (Node) event.getSource();
+      Stage stage = (Stage) source2.getScene().getWindow();
+      stage.close();
+          
+    } 
+    private void Open_AgregarEliProducto(ActionEvent event) throws IOException {
+                 /*Abrir una ventana*/
+        Stage stage4 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AgregarEliProducto.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load());
+        stage4.setScene(scene2);
+        stage4.initStyle(StageStyle.UNDECORATED);
+        stage4.setTitle("AgregarEliProducto");
+        stage4.show();
+
+        /*Cerrar la ventana*/
+      Node source2 = (Node) event.getSource();
+      Stage stage = (Stage) source2.getScene().getWindow();
+      stage.close();
+          
+    } 
+    private void Open_PedidoAdministrativo(ActionEvent event) throws IOException {
+                 /*Abrir una ventana*/
+        Stage stage4 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PedidoAdministrativo.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load());
+        stage4.setScene(scene2);
+        stage4.initStyle(StageStyle.UNDECORATED);
+        stage4.setTitle("PedidoAdministrativo");
         stage4.show();
 
         /*Cerrar la ventana*/

@@ -17,24 +17,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
 /**
  * FXML Controller class
  *
- * @author pccas
+ * @author eveli
  */
-public class SeguridadController implements Initializable {
- @FXML
-   Button btn_seguridad; 
+public class AgregarEliProductoController implements Initializable {
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-    
-    @FXML
+    }   
+     @FXML
     private void Open_DashboardAdmin(ActionEvent event) throws IOException {
         /*Abrir una ventana*/    
         Stage stage=new Stage();
@@ -50,9 +47,7 @@ public class SeguridadController implements Initializable {
         stage2.close();        
         
     }
-    
-        
-    @FXML
+     @FXML
     private TextField txt_usuario;
     @FXML
     private TextField txt_password;
@@ -64,8 +59,5 @@ public class SeguridadController implements Initializable {
     @FXML
     private Button btn_registrarse;
     
-   @FXML
-    private void close(ActionEvent event) {
-        System.exit(0);
-    }
+    
 }
