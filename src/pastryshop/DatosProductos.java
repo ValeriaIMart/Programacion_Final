@@ -9,11 +9,10 @@ package pastryshop;
  * @author pccas
  */
 import java.util.ArrayList;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 /**
  *
  * @author pccas
@@ -35,79 +34,31 @@ public class DatosProductos {
         } return -1;}
     
     
-    public void setAddProductos(
-    
-    int id,
-    String nombre,
-    String descrip,
-    double precio,
-    int cantidad,
-    String foto
-         
-    ) {
-       if (nombre.isEmpty() || descrip.isEmpty()) { JOptionPane.showMessageDialog(null, "Todos los campos deben estar llenos."); } else
- 
-        {
+  // Método para agregar un producto
+    public void setAddProductos(int id, String nombre, String descrip, double precio, int cantidad) {
+        if (nombre.isEmpty() || descrip.isEmpty()) {
+            mostrarAlerta("Todos los campos deben estar llenos.");
+        } else {
             int bus = getBuscarCor(id);
             if (bus != -1) {
-                JOptionPane.showMessageDialog(null, "El Cliente ya se encuentra registrado! Intente con un valor diferente.");
+                mostrarAlerta("El producto ya está registrado.");
             } else {
-                Productos infoF = new Productos(
-                        id,
-                        nombre,
-                        descrip,
-                        precio,
-                        cantidad,
-                        foto
-                        
-                );
-                MisProductos.add(infoF);
-                JOptionPane.showMessageDialog(null, "Nuevo Cliente  registrado a la lista!");
-
-    }
+                Productos producto = new Productos(id, nombre, descrip, precio, cantidad);
+                MisProductos.add(producto);
+                mostrarAlerta("Producto agregado correctamente.");
+            }
         }
-    } 
-
+    }
     
 
-    public void setDataJTable(JTable jTable1) {
-        //Se definen el título de las columnas
-        Vector columnas = new Vector();
-        columnas.add("Id");
-        columnas.add("Nombre");
-        columnas.add("Descripcion");
-        columnas.add("precio");
-        columnas.add("cantidad");
-        columnas.add("foto");
+ // Método para obtener los productos como lista
+    public List<Productos> getMisProductos() {
+        return MisProductos;
+    }
 
-
-        Vector fila = null;
-        Vector tuplas = new Vector();
-        int i;
-        Productos aux = null;
-        Productos CLI = null;
-      
-
-        for (i = 0; i < MisProductos.size(); i++) {
-            aux = (Productos) MisProductos.get(i);
-            fila = new Vector();
-           
-                CLI = (Productos) MisProductos.get(i);
-                fila.add("" + CLI.id);
-                fila.add("" + CLI.nombre);
-                fila.add("" + CLI.descrip);
-                fila.add("" + CLI.precio);
-                fila.add("" + CLI.cantidad);
-                 fila.add("" + CLI.foto);
-              
-
-                fila.add(" ");
-            
-            tuplas.add(fila);
-        }
-
-        DefaultTableModel miModelo = new DefaultTableModel(tuplas, columnas);
-        jTable1.setModel(miModelo);
+    // Método para convertir los productos en un ObservableList
+    public ObservableList<Productos> getProductosObservable() {
+        return FXCollections.observableArrayList(MisProductos);
     }
 
     public Productos getProductos(int idx) {
@@ -118,6 +69,14 @@ public class DatosProductos {
     
     
      
+    // Método para mostrar alertas
+    private void mostrarAlerta(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
      
      
      

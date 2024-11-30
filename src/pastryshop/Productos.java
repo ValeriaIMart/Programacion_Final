@@ -14,15 +14,13 @@ public class Productos {
     String descrip;
     double precio;
     int cantidad;
-    String foto;
 
-    public Productos(int id, String nombre, String descrip, double precio, int cantidad, String foto) {
+    public Productos(int id, String nombre, String descrip, double precio, int cantidad) {
         this.id = id;
         this.nombre = nombre;
         this.descrip = descrip;
         this.precio = precio;
         this.cantidad = cantidad;
-        this.foto = foto;
     }
 
     public int getId() {
@@ -64,18 +62,7 @@ public class Productos {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+ 
 
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    
-    
-    
-    
     
 }

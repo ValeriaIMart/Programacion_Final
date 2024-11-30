@@ -2,12 +2,11 @@ package pastryshop;
 
 
 import java.util.ArrayList;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
+import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -36,86 +35,41 @@ public class DatosUsuario {
         } return -1;}
     
     
-    public void setAddUsuario(
-     String nombre,
-     String numero,
-     String direccion,
-     String correo,
-     String contraseña,
-     String Rol
-         
-    ) 
-    {
-//        if (nombre.isEmpty() || numero.isEmpty() || direccion.isEmpty() || correo.isEmpty() || contraseña.isEmpty() || Rol.isEmpty()) {
-//            JOptionPane.showMessageDialog(null, "Todos los campos deben estar llenos.");
-//        } else
-// 
-//        {
-//            int bus = getBuscarCor(correo);
-//            if (bus != -1) {
-//                JOptionPane.showMessageDialog(null, "El Cliente ya se encuentra registrado! Intente con un valor diferente.");
-//            } else {
-                Usuario infoF = new Usuario(
-                        nombre,
-                        numero,
-                        direccion,
-                        correo,
-                        contraseña,
-                        Rol
-                );
-                MisClientes.add(infoF);
-                //JOptionPane.showMessageDialog(null, "Nuevo Cliente  registrado a la lista!");
-
-  //  }
-   //     }
-    } 
-
-    
-
-    public void setDataJTable(JTable jTable1) {
-        //Se definen el título de las columnas
-        Vector columnas = new Vector();
-        columnas.add("Nombres");
-        columnas.add("Numero de telefono");
-        columnas.add("Direccion");
-        columnas.add("Correo");
-        columnas.add("Contraseña");
-        columnas.add("Rol");
-
-        Vector fila = null;
-        Vector tuplas = new Vector();
-        int i;
-        Usuario aux = null;
-        Usuario CLI = null;
-      
-
-        for (i = 0; i < MisClientes.size(); i++) {
-            aux = (Usuario) MisClientes.get(i);
-            fila = new Vector();
-           
-                CLI = (Usuario) MisClientes.get(i);
-                fila.add("" + CLI.nombre);
-                fila.add("" + CLI.numero);
-                fila.add("" + CLI.direccion);
-                fila.add("" + CLI.correo);
-                fila.add("" + CLI.contraseña);
-                fila.add("" + CLI.Rol);
-              
-
-                fila.add(" ");
-            
-            tuplas.add(fila);
+   // Método para agregar un producto
+    public void setAddUsuarios( String nombre, String numero, String direccion, String correo,String contraseña,String rol) {
+        if (nombre.isEmpty() || numero.isEmpty()) {
+            mostrarAlerta("Todos los campos deben estar llenos.");
+        } else {
+            int bus = getBuscarCor(correo);
+            if (bus != -1) {
+                mostrarAlerta("El Usuario ya está registrado.");
+            } else {
+                Usuario usuarios = new Usuario( nombre, numero, direccion, correo,contraseña,rol);
+                MisClientes.add(usuarios);
+                mostrarAlerta("Usuario agregado correctamente.");
+            }
         }
-
-        DefaultTableModel miModelo = new DefaultTableModel(tuplas, columnas);
-        jTable1.setModel(miModelo);
     }
 
-    public Usuario getCliente(int idx) {
-        Usuario aux = null;
-        aux = (Usuario) MisClientes.get(idx);
-        return aux;
+    // Método para obtener los productos como lista
+    public List<Usuario> getMisUsuarios() {
+        return MisClientes;
     }
+
+    // Método para convertir los productos en un ObservableList
+    public ObservableList<Usuario> getProductosObservable() {
+        return FXCollections.observableArrayList(MisClientes);
+    }
+
+    // Método para mostrar alertas
+    private void mostrarAlerta(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
     
 
 

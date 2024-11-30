@@ -15,7 +15,7 @@
             <Image url="@Imagenes/menu.fw.jpeg" />
          </image>
       </ImageView>
-      <Button layoutY="626.0" mnemonicParsing="false" onAction="#Open_Seguridad" prefHeight="87.0" prefWidth="148.0" text="Seguridad">
+      <Button fx:id="btn_BuscarSeguridad" layoutY="626.0" mnemonicParsing="false" onAction="#Open_Seguridad" prefHeight="87.0" prefWidth="148.0" text="Seguridad">
          <graphic>
             <ImageView fitHeight="31.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,7 +24,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="148.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_PedidoAdministrativo" prefHeight="87.0" prefWidth="142.0" text=" pedidos">
+      <Button fx:id="btn_BuscarPedido" layoutX="148.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_PedidoAdministrativo" prefHeight="87.0" prefWidth="142.0" text=" pedidos">
          <graphic>
             <ImageView fitHeight="54.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -33,7 +33,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="290.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_AgregarProducto" prefHeight="87.0" prefWidth="132.0" text="Productos">
+      <Button fx:id="btn_BuscarProducto" layoutX="290.0" layoutY="626.0" mnemonicParsing="false" onAction="#Open_AgregarProducto" prefHeight="87.0" prefWidth="132.0" text="Productos">
          <graphic>
             <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                <image>

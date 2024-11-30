@@ -6,7 +6,6 @@ package pastryshop;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -31,74 +31,118 @@ public class FXMLRegistrarSistemaController implements Initializable {
      * Initializes the controller class.
      */
     
-    public ArrayList MisClientes;
-
-    DatosUsuario listausuario;
-    Usuario auxven; 
     
-    @FXML
-    private TextField txt_id;
     @FXML
     private TextField txt_nombre;
     @FXML
+    private TextField txt_numero;
+    @FXML
     private TextField txt_direccion;
     @FXML
-    private TextField txt_telefono;
-    @FXML
     private TextField txt_correo;
-    @FXML
-    private TextField txt_password;
-
-
-
-
-    @FXML
-    private Button btn_add;
-
-    @FXML
-    private void Add_Registro(ActionEvent event) {
-                         Usuario infoF = new Usuario(
-                        this.txt_nombre.getText(),
-                        this.txt_telefono.getText(),
-                        this.txt_direccion.getText(),
-                        this.txt_correo.getText(),
-                        this.txt_password.getText(),
-                        "Cliente"
-                );
-                MisClientes.add(infoF);
-                
-                
- this.txt_nombre.setText("");
- this.txt_telefono.setText("");
- this.txt_direccion.setText("");
- this.txt_correo.setText("");
- this.txt_password.setText("");
-        
-       
-    }
     
+   @FXML
+    private TextField txt_contraseña;
     @FXML
-    private void Open_Login(ActionEvent event) throws IOException {
-        /*Abrir una ventana*/
-        Stage stage3 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load());
-        stage3.setScene(scene2);
-         stage3.initStyle(StageStyle.UNDECORATED);
-        stage3.setTitle("Login");
-        stage3.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-
-    }
+    private TextField txt_rol;
     
+      @FXML
+    private Button btn_aceptar;
+      
+         @FXML
+    private Button btn_cancelar;
+      
+    private DatosUsuario datosU;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-          MisClientes = new ArrayList();
-    }    
+        // TODO
+         datosU = new DatosUsuario();
+  // Cargar los datos iniciales en el TableView
+       
+    }  
     
+ @FXML
+    private void AGU(ActionEvent event)throws IOException {
+      
+            
+            // Leer valores de los campos de texto
+            String nombre = txt_nombre.getText().trim();
+            String numero = txt_numero.getText().trim();
+            String direccion = txt_direccion.getText().trim();
+            String correo = txt_correo.getText().trim();
+            String contraseña = txt_contraseña.getText().trim();
+            String rol = txt_rol.getText().trim();
+            // Validar campos vacíos
+            if (nombre.isEmpty() || numero.isEmpty()) {
+                mostrarError("Por favor, llena todos los campos.");
+                return;
+            }
+
+            // Agregar producto a la lista
+            datosU.setAddUsuarios( nombre, numero, direccion, correo,contraseña,rol);
+
+            // Confirmar y actualizar la tabla
+            mostrarMensaje("Usuario agregado correctamente.");
+              try {
+            // Cargar el archivo FXML del DashboardAdmin
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            // Crear una nueva ventana para DashboardAdmin
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("Login ");
+            stage.show();
+
+            // Cerrar la ventana actual
+            Node source = (Node) event.getSource();
+            Stage currentStage = (Stage) source.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarError("No se pudo abrir el Dashboard . Verifica el archivo FXML y el controlador.");
+        }      
+            
+            limpiarCampos();
+        
+    }
+    
+    
+     // Método para limpiar los campos después de agregar un producto
+    private void limpiarCampos() {
+        
+        txt_nombre.clear();
+        txt_numero.clear();
+        txt_direccion.clear();
+        txt_correo.clear();
+        txt_contraseña.clear();
+        txt_rol.clear();
+    }
+   
+      
+      // Método para mostrar mensajes de éxito
+    private void mostrarMensaje(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+    
+
+           
+    // Método para mostrar errores
+    private void mostrarError(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+    
+
+    
+ 
 }

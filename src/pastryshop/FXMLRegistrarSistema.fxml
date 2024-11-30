@@ -5,19 +5,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="280.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.FXMLRegistrarSistemaController">
+<AnchorPane id="AnchorPane" prefHeight="382.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.FXMLRegistrarSistemaController">
    <children>
-      <Button fx:id="btn_add" layoutX="121.0" layoutY="235.0" mnemonicParsing="false" onAction="#Add_Registro" prefHeight="25.0" prefWidth="100.0" text="Adicionar" />
+      <Button fx:id="btn_aceptar" layoutX="122.0" layoutY="293.0" mnemonicParsing="false" onAction="#AGU" prefHeight="25.0" prefWidth="100.0" text="Adicionar" />
       <Label layoutX="27.0" layoutY="56.0" text="Nombre:" AnchorPane.leftAnchor="27.0" />
       <Label layoutX="27.0" layoutY="90.0" text="Teléfono:" AnchorPane.leftAnchor="27.0" />
       <Label layoutX="27.0" layoutY="124.0" text="Dirección:" AnchorPane.leftAnchor="27.0" />
       <Label layoutX="27.0" layoutY="157.0" text="Correo:" AnchorPane.leftAnchor="27.0" />
       <TextField fx:id="txt_nombre" layoutX="123.0" layoutY="52.0" prefHeight="25.0" prefWidth="205.0" />
-      <TextField fx:id="txt_telefono" layoutX="123.0" layoutY="90.0" prefHeight="25.0" prefWidth="205.0" />
+      <TextField fx:id="txt_numero" layoutX="123.0" layoutY="90.0" prefHeight="25.0" prefWidth="205.0" />
       <TextField fx:id="txt_direccion" layoutX="123.0" layoutY="120.0" prefHeight="25.0" prefWidth="205.0" />
       <TextField fx:id="txt_correo" layoutX="123.0" layoutY="153.0" prefHeight="25.0" prefWidth="205.0" />
-      <TextField fx:id="txt_password" layoutX="123.0" layoutY="193.0" prefHeight="25.0" prefWidth="205.0" />
+      <TextField fx:id="txt_contraseña" layoutX="123.0" layoutY="193.0" prefHeight="25.0" prefWidth="205.0" />
       <Label layoutX="27.0" layoutY="197.0" text="Contraseña:" AnchorPane.leftAnchor="27.0" />
-      <Button layoutX="226.0" layoutY="235.0" mnemonicParsing="false" onAction="#Open_Login" prefHeight="25.0" prefWidth="100.0" text="Cancelar" />
+      <Label layoutX="27.0" layoutY="237.0" text="Rol:" />
+      <TextField fx:id="txt_rol" layoutX="123.0" layoutY="233.0" prefHeight="25.0" prefWidth="205.0" />
    </children>
 </AnchorPane>

@@ -12,10 +12,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
 
 /**
  * FXML Controller class
@@ -34,60 +37,71 @@ public class DashboardAdminController implements Initializable {
         // TODO
     }    
     
-     @FXML
-    private void Open_Seguridad(ActionEvent event) throws IOException {
-                 /*Abrir una ventana*/
-        Stage stage4 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Seguridad.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load());
-        stage4.setScene(scene2);
-        stage4.initStyle(StageStyle.UNDECORATED);
-        stage4.setTitle("Seguridad");
-        stage4.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-          
-    } 
-     @FXML
-    private void Open_AgregarProducto(ActionEvent event) throws IOException {
-                 /*Abrir una ventana*/
-        Stage stage4 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AgregarProducto.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load());
-        stage4.setScene(scene2);
-        stage4.initStyle(StageStyle.UNDECORATED);
-        stage4.setTitle("AgregarProducto");
-        stage4.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-          
-    }
-     @FXML
-    private void Open_PedidoAdministrativo(ActionEvent event) throws IOException {
-                 /*Abrir una ventana*/
-        Stage stage4 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PedidoAdministrativo.fxml"));
-        Scene scene2 = new Scene(fxmlLoader.load());
-        stage4.setScene(scene2);
-        stage4.initStyle(StageStyle.UNDECORATED);
-        stage4.setTitle("PedidoAdministrativo");
-        stage4.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-          
-    } 
     
-     @FXML
+ @FXML
+    private void Open_AgregarProducto(ActionEvent event) {
+        abrirVentana(event, "AgregarProducto.fxml", "Agregar Producto");
+    }
+
+    @FXML
+    private void Open_Seguridad(ActionEvent event) {
+        abrirVentana(event, "Seguridad.fxml", "Seguridad");
+    }
+
+    @FXML
     private void close(ActionEvent event) {
         System.exit(0);
+    }
+    
+     private void abrirVentana(ActionEvent event, String fxmlFile, String title) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle(title);
+            stage.show();
+
+            // Cerrar la ventana actual
+            Node source = (Node) event.getSource();
+            Stage currentStage = (Stage) source.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarError("No se pudo abrir la ventana: " + title);
+        }
+    }
+
+    @FXML
+    private void Open_PedidoAdministrativo(ActionEvent event) {
+        try {
+            // Cargar el archivo FXML para la ventana de pedidos
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PedidoAdministrativo.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            // Crear la nueva ventana
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("Pedidos Administrativos");
+            stage.show();
+
+            // Cerrar la ventana actual
+            Node source = (Node) event.getSource();
+            Stage currentStage = (Stage) source.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarError("No se pudo abrir la ventana de pedidos administrativos.");
+        }
+    }
+
+    private void mostrarError(String mensaje) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 }
