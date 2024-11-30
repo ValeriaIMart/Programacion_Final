@@ -52,14 +52,14 @@ public class DashboardAdminController implements Initializable {
           
     } 
      @FXML
-    private void Open_AgregarEliProducto(ActionEvent event) throws IOException {
+    private void Open_AgregarProducto(ActionEvent event) throws IOException {
                  /*Abrir una ventana*/
         Stage stage4 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AgregarEliProducto.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AgregarProducto.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         stage4.setScene(scene2);
         stage4.initStyle(StageStyle.UNDECORATED);
-        stage4.setTitle("AgregarEliProducto");
+        stage4.setTitle("AgregarProducto");
         stage4.show();
 
         /*Cerrar la ventana*/

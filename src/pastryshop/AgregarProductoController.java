@@ -22,7 +22,7 @@ import javafx.stage.Stage;
  *
  * @author eveli
  */
-public class AgregarEliProductoController implements Initializable {
+public class AgregarProductoController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -30,7 +30,8 @@ public class AgregarEliProductoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }   
+    }  
+    
      @FXML
     private void Open_DashboardAdmin(ActionEvent event) throws IOException {
         /*Abrir una ventana*/    
@@ -47,7 +48,8 @@ public class AgregarEliProductoController implements Initializable {
         stage2.close();        
         
     }
-     @FXML
+         
+    @FXML
     private TextField txt_usuario;
     @FXML
     private TextField txt_password;
@@ -58,6 +60,11 @@ public class AgregarEliProductoController implements Initializable {
     
     @FXML
     private Button btn_registrarse;
+    
+   @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
+    }
     
     
 }
