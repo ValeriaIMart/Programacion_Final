@@ -85,4 +85,9 @@ public class DashboardAdminController implements Initializable {
       stage.close();
           
     } 
+    
+     @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
+    }
 }

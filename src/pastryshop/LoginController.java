@@ -44,6 +44,10 @@ public class LoginController implements Initializable {
     @FXML
     private Button btn_registrarse;
     
+    @FXML
+    private Button btn_demo;
+    
+    
     
     
     
@@ -60,6 +64,32 @@ public class LoginController implements Initializable {
     private void Salir(ActionEvent event) {
         System.exit(0);
     }
+    
+        @FXML
+    private void Marco(ActionEvent event) throws IOException {
+        String d;
+    }
+    
+    
+    
+        @FXML
+    private void Open_RegisA(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/
+        Stage stage2 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLRegistrarSistema.fxml"));
+        Scene scene1 = new Scene(fxmlLoader.load());
+        stage2.setScene(scene1);
+        stage2.initStyle(StageStyle.UNDECORATED);
+        stage2.setTitle("Regis");
+        stage2.show();
+
+        /*Cerrar la ventana*/
+      Node source2 = (Node) event.getSource();
+      Stage stage = (Stage) source2.getScene().getWindow();
+      stage.close();
+
+    }
+    
     
        @FXML
     private void Open_Regis(ActionEvent event) throws IOException {
