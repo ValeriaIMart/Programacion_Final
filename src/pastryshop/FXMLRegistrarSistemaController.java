@@ -84,31 +84,21 @@ public class FXMLRegistrarSistemaController implements Initializable {
 
             // Confirmar y actualizar la tabla
             mostrarMensaje("Usuario agregado correctamente.");
-              try {
-            // Cargar el archivo FXML del DashboardAdmin
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-
-            // Crear una nueva ventana para DashboardAdmin
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Login ");
-            stage.show();
-
-            // Cerrar la ventana actual
-            Node source = (Node) event.getSource();
-            Stage currentStage = (Stage) source.getScene().getWindow();
-            currentStage.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            mostrarError("No se pudo abrir el Dashboard . Verifica el archivo FXML y el controlador.");
-        }      
-            
-            limpiarCampos();
-        
-    }
     
+       Stage stage4 = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load());
+        stage4.setScene(scene2);
+        stage4.initStyle(StageStyle.UNDECORATED);
+        stage4.setTitle("Dashboard");
+        stage4.show();
+
+        /*Cerrar la ventana*/
+      Node source2 = (Node) event.getSource();
+      Stage stage = (Stage) source2.getScene().getWindow();
+      stage.close();
+    }
+
     
      // Método para limpiar los campos después de agregar un producto
     private void limpiarCampos() {

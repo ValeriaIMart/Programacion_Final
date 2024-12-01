@@ -4,7 +4,6 @@
  */
 package pastryshop;
 
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -46,15 +46,24 @@ public class LoginController implements Initializable {
     
     @FXML
     private Button btn_demo;
+      private DatosUsuario datosU;
     
     
-    
+        
+
+  
     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+          datosU = new DatosUsuario();
+          datosU.setAddUsuarioss("Valeria"," 3103332810", "calle11", "valeria@ejemplo", "Dios"," Cliente");
+          
+          
+          
+    }  
+    
 
     void init(String hola, Stage stage, LandingPageController aThis) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -65,10 +74,7 @@ public class LoginController implements Initializable {
         System.exit(0);
     }
     
-        @FXML
-    private void Marco(ActionEvent event) throws IOException {
-        String d;
-    }
+   
     
     
     
@@ -111,6 +117,15 @@ public class LoginController implements Initializable {
 
     @FXML
     private void Open_Dashboard(ActionEvent event) throws IOException {
+        
+        
+        
+     
+        int idx = datosU.getBuscarCor(this.txt_usuario.getText().trim());
+
+    if (idx != -1) { // Si se encuentra el usuario
+        Usuario auxven = datosU.getCliente(idx); // Recuperar datos del usuario
+        
         /*Abrir una ventana*/
         Stage stage3 = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
@@ -125,9 +140,27 @@ public class LoginController implements Initializable {
       Stage stage = (Stage) source2.getScene().getWindow();
       stage.close();
 
+    
+    } else { // Si no se encuentra el usuario
+       mostrarAlerta("Todos los campos deben estar llenos.");
+        
+        // Limpiar el campo de texto y devolverle el foco
+        this.txt_usuario.setText("");
+        this.txt_usuario.requestFocus();
     }
     
 
+    }
+    
+
+    // Método para mostrar alertas
+    private void mostrarAlerta(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
    
 }
    
