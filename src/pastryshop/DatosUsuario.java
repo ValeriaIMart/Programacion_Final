@@ -1,49 +1,40 @@
-package pastryshop;
-
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import java.io.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 import javafx.scene.control.Alert;
-import javax.swing.JOptionPane;
-import javax.swing.JTextArea;
+import pastryshop.Usuario;
 
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author pccas
- */
 public class DatosUsuario {
 
-    public ArrayList <Usuario >MisClientes;
+    // Usamos LinkedList para la lista de clientes
+    public LinkedList<Usuario> MisClientes;
+
+    // Usamos una pila para gestionar la adición de usuarios
+    public Stack<Usuario> pilaUsuarios;
 
     DatosUsuario() {
-        MisClientes = new ArrayList();  
+        MisClientes = new LinkedList<>();
+        pilaUsuarios = new Stack<>();
     }
 
     public int getBuscarCor(String Cor) {
         int i;
         Usuario auxE = null;
+        // Recorremos la LinkedList para buscar el correo
         for (i = 0; i < MisClientes.size(); i++) {
-            auxE = (Usuario) MisClientes.get(i);
-            if (auxE.correo.equals(Cor)) { 
-                return i; }
-        } return -1;}
-    
-    
-   // Método para agregar un producto
-    public void setAddUsuarios( String nombre, String numero, String direccion, String correo,String contraseña,String rol) {
+            auxE = MisClientes.get(i);
+            if (auxE.correo.equals(Cor)) {
+                return i; // Devuelve la posición en la lista
+            }
+        }
+        return -1; // Si no lo encuentra, devuelve -1
+    }
+
+    // Método para agregar un usuario
+    public void setAddUsuarios(String nombre, String numero, String direccion, String correo, String contraseña, String rol) {
         if (nombre.isEmpty() || numero.isEmpty()) {
             mostrarAlerta("Todos los campos deben estar llenos.");
         } else {
@@ -51,34 +42,31 @@ public class DatosUsuario {
             if (bus != -1) {
                 mostrarAlerta("El Usuario ya está registrado.");
             } else {
-                Usuario usuarios = new Usuario( nombre, numero, direccion, correo,contraseña,rol);
-                MisClientes.add(usuarios);
+                Usuario usuarios = new Usuario(nombre, numero, direccion, correo, contraseña, rol);
+                MisClientes.add(usuarios); // Agregar al final de la LinkedList
                 mostrarAlerta("Usuario agregado correctamente.");
             }
         }
     }
-    
-     // Método para agregar un producto
-    public void setAddUsuarioss( String nombre, String numero, String direccion, String correo,String contraseña,String rol) {
-    
-            int bus = getBuscarCor(correo);
-            if (bus != -1) {
-                mostrarAlerta("El Usuario ya está registrado.");
-            } else {
-                Usuario usuarios = new Usuario( nombre, numero, direccion, correo,contraseña,rol);
-                MisClientes.add(usuarios);
-               
-            }
-        
+
+    // Método para agregar un usuario a la pila
+    public void setAddUsuarioss(String nombre, String numero, String direccion, String correo, String contraseña, String rol) {
+        int bus = getBuscarCor(correo);
+        if (bus != -1) {
+            mostrarAlerta("El Usuario ya está registrado.");
+        } else {
+            Usuario usuarios = new Usuario(nombre, numero, direccion, correo, contraseña, rol);
+            MisClientes.add(usuarios);  // Agregar al final de la LinkedList
+            pilaUsuarios.push(usuarios); // También agregamos a la pila
+        }
     }
-    
- 
-    // Método para obtener los productos como lista
+
+    // Método para obtener los usuarios como lista
     public List<Usuario> getMisUsuarios() {
         return MisClientes;
     }
 
-    // Método para convertir los productos en un ObservableList
+    // Método para convertir los usuarios en un ObservableList (para uso en JavaFX)
     public ObservableList<Usuario> getProductosObservable() {
         return FXCollections.observableArrayList(MisClientes);
     }
@@ -91,17 +79,13 @@ public class DatosUsuario {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-    
-    
+
+    // Método para obtener un cliente por su índice
     public Usuario getCliente(int idx) {
-        Usuario aux = null;
-        aux = (Usuario) MisClientes.get(idx);
-        return aux;
+        return MisClientes.get(idx);
     }
-    
 
-
-     // Método para cargar usuarios desde un archivo
+    // Método para cargar usuarios desde un archivo
     public void cargarUsuarios() {
         try (BufferedReader reader = new BufferedReader(new FileReader("c:/Prueba/usuarios.txt"))) {
             String line;
@@ -158,4 +142,3 @@ public class DatosUsuario {
         mostrarAlerta(mensaje.toString());
     }
 }
-    
