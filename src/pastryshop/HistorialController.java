@@ -22,10 +22,10 @@ import javafx.stage.StageStyle;
 /**
  * FXML Controller class
  *
- * @author eveli
+ * @author pccas
  */
-public class PedidoAdministrativoController implements Initializable {
- @FXML
+public class HistorialController implements Initializable {
+  @FXML
     private DatosProductos datosp;
    @FXML
     private Button btn_atras;
@@ -50,17 +50,17 @@ public class PedidoAdministrativoController implements Initializable {
     }
     
      @FXML
-    private void Open_DashboardAdmin(ActionEvent event) throws IOException {
+    private void Open_Dashboard(ActionEvent event) throws IOException {
           try {
             // Cargar el archivo FXML del DashboardAdmin
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardAdmin.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Crear una nueva ventana para DashboardAdmin
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("DashboardAdmin ");
+            stage.setTitle("Dashboard ");
             stage.show();
 
             // Cerrar la ventana actual
@@ -69,7 +69,7 @@ public class PedidoAdministrativoController implements Initializable {
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
-            mostrarError("No se pudo abrir el Dashboard. Verifica el archivo FXML y el controlador.");
+            mostrarError("No se pudo abrir el Dashboard Admin. Verifica el archivo FXML y el controlador.");
         }      
         
     }

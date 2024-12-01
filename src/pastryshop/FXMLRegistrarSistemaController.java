@@ -32,6 +32,14 @@ public class FXMLRegistrarSistemaController implements Initializable {
      */
     
     
+    
+    
+    
+    
+    @FXML
+    private Button btn_ar;
+      
+    
     @FXML
     private TextField txt_nombre;
     @FXML
@@ -120,9 +128,7 @@ public class FXMLRegistrarSistemaController implements Initializable {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-    
-
-           
+ 
     // Método para mostrar errores
     private void mostrarError(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -132,7 +138,11 @@ public class FXMLRegistrarSistemaController implements Initializable {
         alert.showAndWait();
     }
     
+@FXML
+private void archivo(){
+datosU.guardarUsuarios();
 
+}
     
  
 }

@@ -64,11 +64,11 @@ public class LoginadmController implements Initializable {
         {
             /*Abrir una ventana*/
         Stage stage3 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardAdmin.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         stage3.setScene(scene2);
          stage3.initStyle(StageStyle.UNDECORATED);
-        stage3.setTitle("Dashboard");
+        stage3.setTitle("DashboardAdmin");
         stage3.show();
 
         /*Cerrar la ventana*/

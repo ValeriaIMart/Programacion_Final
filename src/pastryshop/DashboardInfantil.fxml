@@ -27,11 +27,6 @@
                   </ImageView>
                   <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta  Hello Kitty con crema pastelera&#10; de colores rosados y azulados  con centro&#10; de Hello Kitty que muestra un diseño&#10; delicado y limpio, medidas 40x40cm." />
                   <Label layoutX="10.0" layoutY="172.0" text="55,000" />
-                  <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Label layoutX="79.0" layoutY="14.0" text="Pastel Hello Kitty">
                      <font>
                         <Font name="Baskerville Old Face" size="16.0" />
@@ -56,11 +51,6 @@
                   </ImageView>
                   <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta pequeña de tigre con un diseño&#10; detallado y divertido con colores&#10; vibrantes que se robaran la atención.&#10;Medidas 40 x 40cm" />
                   <Label layoutX="10.0" layoutY="172.0" text="60,000" />
-                  <Button layoutX="134.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Label layoutX="68.0" layoutY="14.0" text="Pastel tigre guiño">
                      <font>
                         <Font name="Baskerville Old Face" size="15.0" />
@@ -85,11 +75,6 @@
                   </ImageView>
                   <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta de tres leches con decoración de&#10; león para que tu pequeño no olvide su&#10; memorable dia. Dale el gusto que se&#10; merece al mejor precio!!!!&#10;Medidas 40 x40" />
                   <Label layoutX="10.0" layoutY="172.0" text="50,000" />
-                  <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Label layoutX="106.0" layoutY="14.0" text="Pastel León">
                      <font>
                         <Font name="Baskerville Old Face" size="15.0" />
@@ -114,11 +99,6 @@
                   </ImageView>
                   <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta arcoíris decorada con nubes y &#10;arcoíris de fondant de colores pasteles &#10;ideal para crear un ambiente agradable&#10;, medidas 20x20cm." />
                   <Label layoutX="10.0" layoutY="172.0" text="50,000" />
-                  <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <Label layoutX="59.0" layoutY="14.0" text="Pastel nube sonriente">
                      <font>
                         <Font name="Baskerville Old Face" size="15.0" />

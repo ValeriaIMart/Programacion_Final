@@ -189,6 +189,42 @@ public class DashboardController implements Initializable {
         stage2.close();        
         
     }
+        
+         @FXML
+    private void Open_Historial(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Historial.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("Historial");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
+    
+             @FXML
+    private void Open_Favoritos(ActionEvent event) throws IOException {
+        /*Abrir una ventana*/    
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("Favoritos.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("Favoritos");
+        stage.show();
+        
+        /*Cerrar la ventana*/
+        Node source2 = (Node) event.getSource();
+        Stage stage2 = (Stage) source2.getScene().getWindow();
+        stage2.close();        
+        
+    }
 }
 
 

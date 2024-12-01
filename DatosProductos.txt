@@ -1,0 +1,16 @@
+Codigo: 6
+Nombre: Torta de cumpleaños para dama
+Descripcion: Cumpleaños
+Precio: 70000.0
+Cantidad: 6
+Total: 420000.0
+=================================
+
+Codigo: 11
+Nombre: Torta de cumpleaños para dama
+Descripcion: Cumpleaños
+Precio: 40000.0
+Cantidad: 11
+Total: 440000.0
+=================================
+

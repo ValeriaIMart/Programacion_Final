@@ -3,12 +3,16 @@ package pastryshop;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 
 /*
@@ -22,7 +26,7 @@ import javafx.scene.control.Alert;
  */
 public class DatosUsuario {
 
-    public ArrayList MisClientes;
+    public ArrayList <Usuario >MisClientes;
 
     DatosUsuario() {
         MisClientes = new ArrayList();  
@@ -97,31 +101,61 @@ public class DatosUsuario {
     
 
 
+     // Método para cargar usuarios desde un archivo
     public void cargarUsuarios() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("usuarios.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("c:/Prueba/usuarios.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length == 6) {
-                    Usuario usuario = new Usuario(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
+                String[] datos = line.split(",");
+                if (datos.length == 6) {
+                    Usuario usuario = new Usuario(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
                     MisClientes.add(usuario);
                 }
             }
+            mostrarAlerta("Usuarios cargados correctamente.");
         } catch (IOException e) {
-            e.printStackTrace();
-            mostrarAlerta("Error al cargar los usuarios.");
+            mostrarAlerta("Error al cargar los usuarios: " + e.getMessage());
         }
-        
-        
-        
-        
-        
+    }
+
+    // Método para guardar usuarios en un archivo
+    public void guardarUsuarios() {
+        try (PrintWriter pw = new PrintWriter(new FileWriter("c:/Prueba/usuarios.txt"))) {
+            if (MisClientes.isEmpty()) {
+                pw.println("Lista de usuarios vacía.");
+            } else {
+                for (Usuario usuario : MisClientes) {
+                    pw.println(usuario.nombre + "," +
+                            usuario.numero + "," +
+                            usuario.direccion + "," +
+                            usuario.correo + "," +
+                            usuario.contraseña + "," +
+                            usuario.Rol);
+                }
+            }
+            mostrarAlerta("Usuarios guardados correctamente.");
+        } catch (IOException e) {
+            mostrarAlerta("Error al guardar los usuarios: " + e.getMessage());
+        }
+    }
+
+    // Método para mostrar todos los usuarios
+    public void mostrarUsuarios() {
+        if (MisClientes.isEmpty()) {
+            mostrarAlerta("No hay usuarios registrados.");
+            return;
+        }
+
+        StringBuilder mensaje = new StringBuilder();
+        for (Usuario usuario : MisClientes) {
+            mensaje.append("Nombre: ").append(usuario.nombre).append("\n");
+            mensaje.append("Número: ").append(usuario.numero).append("\n");
+            mensaje.append("Dirección: ").append(usuario.direccion).append("\n");
+            mensaje.append("Correo: ").append(usuario.correo).append("\n");
+            mensaje.append("Rol: ").append(usuario.Rol).append("\n");
+            mensaje.append("=================================\n");
+        }
+        mostrarAlerta(mensaje.toString());
     }
 }
-  
-
-
-
-
- 
     

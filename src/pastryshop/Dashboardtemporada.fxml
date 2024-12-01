@@ -19,11 +19,6 @@
       <Pane layoutX="26.0" layoutY="159.0" prefHeight="379.0" prefWidth="248.0" style="-fx-background-color: c8c0d3;">
          <children>
             <TextArea editable="false" layoutX="2.0" layoutY="205.0" prefHeight="128.0" prefWidth="248.0" text="Torta de vainilla esponjosa cubierta &#10;con chantilly suave y decorada con detalles &#10;temáticos de Halloween,&#10; medidas 40x40cm &#10;perfecta&#10; para una celebración espeluznante." />
-            <Button fx:id="btn_aceptar" layoutX="108.0" layoutY="340.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="181.0" fitWidth="140.0" layoutX="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/pastel1temporada.jpeg" />
@@ -44,11 +39,6 @@
       <Pane layoutX="26.0" layoutY="555.0" prefHeight="361.0" prefWidth="248.0" style="-fx-background-color: c8c0d3;">
          <children>
             <TextArea editable="false" layoutY="197.0" prefHeight="118.0" prefWidth="238.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
-            <Button fx:id="btn_aceptar1" layoutX="109.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="164.0" fitWidth="169.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/PastelTemporada2.fw.jpeg" />
@@ -69,11 +59,6 @@
       <Pane layoutX="296.0" layoutY="159.0" prefHeight="379.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
          <children>
             <TextArea editable="false" layoutY="208.0" prefHeight="118.0" prefWidth="248.0" text="Torta sabor a chocolate&#10; recubierta con fondant, &#10;y detalles hechos en el mismo material,&#10; medidas 60x60cm&#10; ideal para celebrar noche buena &#10;con tus seres queridos!" />
-            <Button fx:id="btn_aceptar11" layoutX="104.0" layoutY="334.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="205.0" fitWidth="156.0" layoutX="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/pastelTemporada3.fw.jpeg" />
@@ -94,11 +79,6 @@
       <Pane layoutX="296.0" layoutY="555.0" prefHeight="361.0" prefWidth="256.0" style="-fx-background-color: c8c0d3;">
          <children>
             <TextArea editable="false" layoutX="9.0" layoutY="197.0" prefHeight="118.0" prefWidth="248.0" text="Torta con sabor a caramelo,&#10; cubierta con fondant,&#10; medidas 40x40cm &#10;perfecta para  recibir el año nuevo&#10; con dulzura." />
-            <Button fx:id="btn_aceptar12" layoutX="128.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #85798C; -fx-cursor: hand;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Imagenes/PastelTemporada4.fw.jpeg" />

@@ -5,7 +5,6 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -35,7 +34,7 @@
                         <TableColumn fx:id="colTotal" prefWidth="75.0" text="Total" />
                     </columns>
                   </TableView>
-                  <Label layoutX="10.0" layoutY="404.0" text="Carrito" />
+                  <Label layoutX="10.0" layoutY="404.0" text="Lista de deseos" />
                     </children>
                 </AnchorPane>
 
@@ -63,8 +62,6 @@
       <TextField fx:id="txt_eliminar" layoutX="14.0" layoutY="632.0" prefHeight="25.0" prefWidth="155.0" />
       <Label layoutX="14.0" layoutY="607.0" text="Codigo:" />
       <Button fx:id="btn_delete" layoutX="14.0" layoutY="669.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="78.0" text="Eliminar" />
-      <TextArea fx:id="tA_Pedido" layoutX="252.0" layoutY="618.0" prefHeight="152.0" prefWidth="348.0" />
-      <Button fx:id="btn_archivo" layoutX="14.0" layoutY="731.0" mnemonicParsing="false" onAction="#archivo" prefHeight="25.0" prefWidth="222.0" text="Pedir" />
       <Button fx:id="btn_atras" layoutX="735.0" layoutY="729.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="30.0" prefWidth="65.0" text="Atras" />
     </children>
 </AnchorPane>

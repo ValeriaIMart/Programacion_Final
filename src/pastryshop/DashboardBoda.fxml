@@ -25,11 +25,6 @@
             </ImageView>
             <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta  redonda para bodas con fondant&#10; blanco y diseño de corazones y anillos. &#10;Con bizcocho sabor a tres leches.&#10;Ideal para bodas sencillas.&#10; Medidas 20x20." />
             <Label layoutX="10.0" layoutY="172.0" text="70,000" />
-            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <Button layoutX="222.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
@@ -50,11 +45,6 @@
             </ImageView>
             <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta de dos pisos con fondant blanco&#10; y flores comestibles de colores rosas&#10; y blancos con detalles de perlas, con &#10;un sabor de vainilla, perfecto para bodas &#10;sencillas, medidas  40x40cm" />
             <Label layoutX="10.0" layoutY="172.0" text="50,000" />
-            <Button layoutX="134.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <Button layoutX="216.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
@@ -75,11 +65,6 @@
             </ImageView>
             <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta de dos pisos glam decorada con&#10; fondant y ramas de luces con flores&#10; comestibles. bizcocho con sabor a vainilla.&#10;Para una boda glamurosa y elegante.&#10;Medidas 60 x60" />
             <Label layoutX="10.0" layoutY="172.0" text="120,000" />
-            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <Button layoutX="200.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
@@ -100,11 +85,6 @@
             </ImageView>
             <TextArea editable="false" layoutX="10.0" layoutY="189.0" prefHeight="116.0" prefWidth="240.0" text="Torta con forma de corazon con &#10;tonalidades blancas y diseño de flores&#10; (no comestibles) con escrito “married”&#10; en color oscuro. Con bizcocho de sabor &#10;a vainilla, medidas 40x40cm." />
             <Label layoutX="10.0" layoutY="172.0" text="50,000" />
-            <Button layoutX="134.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #85798C;" text="Agregar al carrito" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
             <Button layoutX="202.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: c8c0d3;" underline="true">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">

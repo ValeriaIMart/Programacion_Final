@@ -4,28 +4,36 @@
  */
 package pastryshop;
 
-
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.fxml.Initializable;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-
-public class CarritoController implements Initializable {
-    private DatosProductos datosp;
+/**
+ * FXML Controller class
+ *
+ * @author pccas
+ */
+public class FavoritosController implements Initializable {
+ private DatosProductos datosp;
     @FXML
     private Button btn_archivo;
     @FXML

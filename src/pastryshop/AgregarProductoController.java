@@ -41,7 +41,9 @@ public class AgregarProductoController implements Initializable {
     private TextField txt_cantidad;
     @FXML
     private Button btn_Agregar;
-
+    
+    @FXML
+    private Button btn_archivo;
     @FXML
     private TableView<Productos> tableProductos;
     @FXML
@@ -74,7 +76,12 @@ public class AgregarProductoController implements Initializable {
         // Cargar los datos iniciales en el TableView
         actualizarTabla();
     }  
-    
+       @FXML
+    private TextArea textArea;
+    @FXML
+    private Button btn_archi; 
+       
+       
      @FXML
     private void AGP(ActionEvent event) {
         try {
@@ -152,7 +159,7 @@ public class AgregarProductoController implements Initializable {
         }      
         
     }
-           
+  
     // Método para mostrar errores
     private void mostrarError(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -161,8 +168,17 @@ public class AgregarProductoController implements Initializable {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
+     @FXML
+    public void archivo(){
     
+    datosp.setRegistrarArchivo();
+    }
     
-      
+      @FXML
+    public void archivo2(){
+        
+    datosp.getInfoArchivo(textArea);
+    }
+    
 
 }

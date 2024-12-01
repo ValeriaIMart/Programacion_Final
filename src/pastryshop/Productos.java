@@ -9,6 +9,14 @@ package pastryshop;
  * @author pccas
  */
 public class Productos {
+
+    static int indexOf(Productos productos) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    static void remove(int PosPer) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     int id;
     String nombre;
     String descrip;
@@ -22,6 +30,12 @@ public class Productos {
         this.precio = precio;
         this.cantidad = cantidad;
     }
+
+    Productos() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
 
     public int getId() {
         return id;
@@ -61,6 +75,11 @@ public class Productos {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+    
+    
+    public double getTotal() {
+        return precio * cantidad;
     }
  
 
