@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -97,23 +98,7 @@ public class LoginController implements Initializable {
     }
     
     
-       @FXML
-    private void Open_Regis(ActionEvent event) throws IOException {
-        /*Abrir una ventana*/
-        Stage stage2 = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Regis.fxml"));
-        Scene scene1 = new Scene(fxmlLoader.load());
-        stage2.setScene(scene1);
-        stage2.initStyle(StageStyle.UNDECORATED);
-        stage2.setTitle("Regis");
-        stage2.show();
-
-        /*Cerrar la ventana*/
-      Node source2 = (Node) event.getSource();
-      Stage stage = (Stage) source2.getScene().getWindow();
-      stage.close();
-
-    }
+      
 
     @FXML
     private void Open_Dashboard(ActionEvent event) throws IOException {
@@ -125,8 +110,9 @@ public class LoginController implements Initializable {
 
     if (idx != -1) { // Si se encuentra el usuario
         Usuario auxven = datosU.getCliente(idx); // Recuperar datos del usuario
-        
-        /*Abrir una ventana*/
+    if (auxven.contraseña.equals(this.txt_password.getText()))
+        {
+            /*Abrir una ventana*/
         Stage stage3 = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
@@ -140,13 +126,21 @@ public class LoginController implements Initializable {
       Stage stage = (Stage) source2.getScene().getWindow();
       stage.close();
 
+        }
+        else
+        {
+            mostrarAlerta("Usuario o clave incorrecta");
+
+        }    
+       
+
     
     } else { // Si no se encuentra el usuario
-       mostrarAlerta("Todos los campos deben estar llenos.");
+       mostrarAlerta("Todos los campos deben estar llenos"+"  No se encuentra el usuario!");
         
         // Limpiar el campo de texto y devolverle el foco
         this.txt_usuario.setText("");
-        this.txt_usuario.requestFocus();
+        this.txt_password.requestFocus();
     }
     
 

@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="380.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="pastryshop.LoginadmController">
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pastryshop.LoginadmController">
    <children>
       <ImageView disable="true" fitHeight="705.0" fitWidth="459.0" layoutX="-12.0" layoutY="-62.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -49,10 +48,10 @@
             <Image url="@Imagenes/Look.png" />
          </image>
       </ImageView>
-      <TextField layoutX="107.0" layoutY="267.0" prefHeight="25.0" prefWidth="270.0" promptText="valeria@gmail.com" />
-      <TextField layoutX="107.0" layoutY="322.0" prefHeight="25.0" prefWidth="270.0" promptText="Ingrese su clave" />
-      <Button layoutX="178.0" layoutY="384.0" mnemonicParsing="false" onAction="#Open_DashboardAdmin" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #85798C;" text="Entrar" textFill="WHITE" />
-      <Button layoutX="285.0" layoutY="384.0" mnemonicParsing="false" onAction="#closeAction" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #85798C;" text="Salir" textFill="WHITE" />
+      <TextField fx:id="txt_usuario" layoutX="107.0" layoutY="267.0" prefHeight="25.0" prefWidth="270.0" promptText="valeria@gmail.com" />
+      <TextField fx:id="txt_password" layoutX="107.0" layoutY="322.0" prefHeight="25.0" prefWidth="270.0" promptText="Ingrese su clave" />
+      <Button fx:id="btn_aceptar" layoutX="178.0" layoutY="384.0" mnemonicParsing="false" onAction="#Open_Dashboard" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #85798C;" text="Entrar" textFill="WHITE" />
+      <Button fx:id="btn_cancelar" layoutX="285.0" layoutY="384.0" mnemonicParsing="false" onAction="#Salir" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #85798C;" text="Salir" textFill="WHITE" />
       <Label layoutX="178.0" layoutY="154.0" prefHeight="88.0" prefWidth="166.0" text="Login">
          <font>
             <Font size="41.0" />
