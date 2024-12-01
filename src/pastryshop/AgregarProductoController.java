@@ -168,17 +168,6 @@ public class AgregarProductoController implements Initializable {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-     @FXML
-    public void archivo(){
-    
-    datosp.setRegistrarArchivo();
-    }
-    
-      @FXML
-    public void archivo2(){
-        
-    datosp.getInfoArchivo(textArea);
-    }
     
 
 }

@@ -34,7 +34,6 @@
                      </font>
                   </Label>
                   <TextField fx:id="txt_cantidad" layoutX="42.0" layoutY="380.0" prefHeight="25.0" prefWidth="164.0" promptText="Cantidad" />
-                  <Button fx:id="btn_archivo" layoutX="206.0" layoutY="415.0" mnemonicParsing="false" onAction="#archivo" prefHeight="25.0" prefWidth="44.0" text="Archivo" />
                </children>
             </Pane>
             <!-- Nuevo TableView para mostrar productos -->
@@ -61,8 +60,6 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextArea fx:id="textArea" layoutX="50.0" layoutY="804.0" prefHeight="98.0" prefWidth="320.0" />
-            <Button fx:id="btn_archi" layoutX="370.0" layoutY="810.0" mnemonicParsing="false" onAction="#archivo2" prefHeight="27.0" prefWidth="44.0" text="Archivo" />
          </children>
       </Pane>
    </children>
